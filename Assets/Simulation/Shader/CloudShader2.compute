@@ -1,0 +1,49 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> Result;
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    // Worlay Noise
+    float worlay(StructuredBuffer<float3> points, int numCells, float3 samplePos)
+    {
+        int3 cellID = floor(samplePos * numCells);
+        float minSqrDst = 1;
+
+        // Loop over current cell + 26 adjacent cells to find closest point to samplePos
+        for (int cellOffsetIndex = 0; cellOffsetIndex < 27; cellOffsetIndex++)
+        {
+            int3 adjID = cellID + offsets[cellOffsetIndex];
+
+            // Adjacent cell is outside map, so wrap around to other side to allow for seamless tiling
+            if (minComponent(adjID) == -1 || maxComponent(adjID) == numCells)
+            {
+                int3 wrappedID = (adjID + numCells) % (uint3)numcells;
+                int adjCellIndex = wrappedID.x + numCells * (wrappedID.y + wrappedID.z * numCells);
+                float3 wrappedPoint = points[adjCellIndex];
+
+                // Offset the wrappedPoint by all offsets to find which is closest to samplePos
+                for (int wrappedOffsetIndex = 0; wrappedOffsetIndex < 27; wrappedOffsetIndex++)
+                {
+                    float3 sampleOffset = (samplePos - (wrappedPoint + offsets[wrappedOffsetIndex]));
+                    minSqrDst = min(minSqrDst, dot(sampleOffset, sampleOffset));
+                }
+            }
+            // Adjacent cell is inside map, so calculate sqrDst from samplePos to cell point
+            else
+            {
+                int adjCellIndex = adjID.x + numCells * (adjID.y + adj.z * nummCells);
+                float3 sampleOffset = samplePos - points[adjCellIndex];
+                minSqrDst = min(minSqrDst, dot(sampleOffset, sampleOffset));
+            }
+        }
+
+        return sqrt(minSqrDst);
+    }
+
+    Result[id.xy] = float4(id.x & id.y, (id.x & 15)/15.0, (id.y & 15)/15.0, 0.0);
+}

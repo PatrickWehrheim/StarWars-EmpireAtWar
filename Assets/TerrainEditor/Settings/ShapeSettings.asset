@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23bbf4b63ed8e4043bf25ca85e018781, type: 3}
+  m_Name: ShapeSettings
+  m_EditorClassIdentifier: 
+  ShapeType: 1
+  Radius: 200
+  NoiseLayers:
+  - Enabled: 1
+    UseFirstLayerAsMask: 0
+    NoiseSettings:
+      FilterType: 0
+      SimpleNoiseSettings:
+        Strength: 0.07
+        NumberOfLayers: 5
+        DefaultRoughness: 1.07
+        Roughness: 2.2
+        Persistance: 0.5
+        Center: {x: 0, y: 0, z: 0}
+        MinValue: 0.98
+      RidgidNoiseSettings:
+        Strength: 1
+        NumberOfLayers: 1
+        DefaultRoughness: 1
+        Roughness: 2
+        Persistance: 0.5
+        Center: {x: 0, y: 0, z: 0}
+        MinValue: 0
+        WeightMultiplier: 0.8
+  - Enabled: 1
+    UseFirstLayerAsMask: 1
+    NoiseSettings:
+      FilterType: 1
+      SimpleNoiseSettings:
+        Strength: 1
+        NumberOfLayers: 1
+        DefaultRoughness: 1
+        Roughness: 2
+        Persistance: 0.5
+        Center: {x: 0, y: 0, z: 0}
+        MinValue: 0
+      RidgidNoiseSettings:
+        Strength: 1.42
+        NumberOfLayers: 6
+        DefaultRoughness: 1.59
+        Roughness: 3.3
+        Persistance: 0.5
+        Center: {x: 0, y: 0, z: 0}
+        MinValue: 0.37
+        WeightMultiplier: 0.78

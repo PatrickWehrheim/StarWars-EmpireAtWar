@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ButtonBase">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAACAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\MenuAssets\Scripts\ButtonBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChooseMenuBuilder" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAACAACAAAAAAAAAIAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\MenuAssets\Scripts\ChooseMenuBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MainMenuBuilder" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAACAACAAAAAAAAAIAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\MenuAssets\Scripts\MainMenuBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MenuController">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACAEAAAAAAAgAAAAAAAAAAAAQAAACAAgAEA=</HashCode>
+      <FileName>Assets\MenuAssets\Scripts\MenuController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuDirector">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAEAAIBAAAAAAAAAAgIAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\MenuAssets\Scripts\MenuDirector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuNode">
+    <Position X="5.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIQAAAAAAAAAAAAAAAAAAAAAAAAABAAAACAAAAAAAA=</HashCode>
+      <FileName>Assets\MenuAssets\Scripts\MenuNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuTree">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\MenuAssets\Scripts\MenuTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuUtils">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAMAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\MenuAssets\Scripts\MenuUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IMenuBuilder" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAACAAAAAAAAAIAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\MenuAssets\Scripts\IMenuBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="MenuType" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEAAAAAAAAAAAAAAAAAAIAQAAAAAAgwAIgAAAAAAAQ=</HashCode>
+      <FileName>Assets\MenuAssets\Scripts\MenuType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
